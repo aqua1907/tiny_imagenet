@@ -11,7 +11,7 @@ to the dataset and serialize R, G, B channels from each image to corresponding l
 Thus, I have 3 dataset:
 - ```train.hdf5``` — 8.6 Gb;
 - ```val.hdf5``` — 960 Mb;
-- ```test.hdf5``` — 960.Nb;
+- ```test.hdf5``` — 960 Mb;
 
 ## Training 
 
