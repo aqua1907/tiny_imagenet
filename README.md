@@ -3,7 +3,7 @@
 Tiny ImageNet dataset consists 200 different classes. Images represent by 64x64 pixels and each 
 class has 1000 images.
 
-##Building dataset 
+## Building dataset 
 For building dataset I used hdf5 database. In [create_dataset.py](https://github.com/aqua1907/tiny_imagenet/blob/master/create_dataset.py)
 I get an image from corresponding folder which is a label of image and using [HDF5Dasetwriter](https://github.com/aqua1907/tiny_imagenet/blob/master/hdf5/hdf5datasetwriter.py) class serialize pixels and class label
 to the dataset and serialize R, G, B channels from each image to corresponding list. ```def save_mean_values(path)``` takes mean from each channel and save it to ```.json``` file.
@@ -13,7 +13,7 @@ Thus, I have 3 dataset:
 - ```val.hdf5``` — 960 Mb;
 - ```test.hdf5``` — 960.Nb;
 
-##Training 
+## Training 
 
 For my research I used [ResNet-50](https://github.com/aqua1907/tiny_imagenet/blob/master/model/RestNet50.py). 
 For feeding data to neural network I use [HDF5DatasetGenerator](https://github.com/aqua1907/tiny_imagenet/blob/master/hdf5/hdf5datasetgenerator.py) 
@@ -22,7 +22,7 @@ for data augmentation. As a optimiser I chose **SGD_Optimiser** and for computin
 because I serialized labels as integers which represented in [```t_imgNet_class_index.json```](https://github.com/aqua1907/tiny_imagenet/blob/master/t_imgNet_class_index.json) created by [```create_class_index.py```](https://github.com/aqua1907/tiny_imagenet/blob/master/create_class_index.py)
 Whole training process is represented in [Jupyter Notebook](https://github.com/aqua1907/tiny_imagenet/blob/master/source.ipynb) file.
 
-##Results
+## Results
 
 ```
 Epoch 36/75
@@ -42,7 +42,7 @@ Epoch 00040: early stopping
 Took time:  08:03:29
 ```
 
-###Loss/Accuracy graph
+### Loss/Accuracy graph
 
 ![loss_graph](model/output/loss_graph.png) ![accuracy_graph](model/output/accuracy_graph.png)
 
