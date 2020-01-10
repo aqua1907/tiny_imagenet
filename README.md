@@ -1,6 +1,6 @@
 # Tiny ImageNet Dataset
 
-Tiny ImageNet dataset consists 200 different classes. Images represent by 64x64 pixels and each 
+Tiny ImageNet dataset consists of 200 different classes. Images represent 64x64 pixels and each 
 class has 1000 images.
 
 ## Building dataset 
